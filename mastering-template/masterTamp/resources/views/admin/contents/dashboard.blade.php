@@ -1,7 +1,6 @@
-@extends('master')
-@section('content')
-    
+@extends('admin.master')
 
+@section('content')
 <div class="container-fluid">
 
     <!-- Page Heading -->
@@ -301,7 +300,7 @@
                 <div class="card-body">
                     <div class="text-center">
                         <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
-                            src="img/undraw_posting_photo.svg" alt="...">
+                            src="admin/img/undraw_posting_photo.svg" alt="...">
                     </div>
                     <p>Add some quality, svg illustrations to your project courtesy of <a
                             target="_blank" rel="nofollow" href="https://undraw.co/">unDraw</a>, a
@@ -329,6 +328,5 @@
         </div>
     </div>
 
-</div>
-
+</div>   
 @endsection
