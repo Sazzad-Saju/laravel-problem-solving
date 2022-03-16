@@ -22,7 +22,7 @@
         <form class="login-form" action="{{route('admin.dashboard.index')}}">
           <h3 class="login-head"><i class="fa fa-lg fa-fw fa-user"></i>SIGN IN</h3>
           <div class="form-group">
-            <label class="control-label">USERNAME</label>
+            <label class="control-label">EMAIL ADDRESS</label>
             <input class="form-control" type="text" placeholder="Email" autofocus>
           </div>
           <div class="form-group">
@@ -42,6 +42,7 @@
           <div class="form-group btn-container">
             <button class="btn btn-primary btn-block"><i class="fa fa-sign-in fa-lg fa-fw"></i>SIGN IN</button>
           </div>
+          <p style="margin-top:15px;"><a href="{{route('admin.register')}}">Not an User ? Register Here.</a></p>
         </form>
         <form class="forget-form" action="index.html">
           <h3 class="login-head"><i class="fa fa-lg fa-fw fa-lock"></i>Forgot Password ?</h3>
