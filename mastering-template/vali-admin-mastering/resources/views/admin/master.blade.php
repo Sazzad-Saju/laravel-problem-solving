@@ -19,6 +19,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Main CSS-->
     <link rel="stylesheet" type="text/css" href="{{asset('admin/css/main.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('admin/css/loader.css')}}">
     <!-- Font-icon css-->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
@@ -31,5 +32,14 @@
     @yield('content')
     <!-- Essential javascripts for application to work-->
     @include('partials.scripts')
+    {{-- loader --}}
+    <div class="loader-wrapper">
+      <span class="loader"><span class="loader-inner"></span></span>
+    </div>
   </body>
+  <script>
+    $(window).on("load",function(){
+      $(".loader-wrapper").fadeOut("slow");
+    });
+  </script>
 </html>

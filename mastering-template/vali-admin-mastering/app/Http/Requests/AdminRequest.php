@@ -27,7 +27,7 @@ class AdminRequest extends FormRequest
             'name' => 'required|min:3|max:10',
             'email' => 'required|email|unique:admins,email',
             'password' => 'required|min:6|confirmed',
-            'checkbox' =>'accepted',
+            'agreement' =>'accepted',
         ];
     }
 }

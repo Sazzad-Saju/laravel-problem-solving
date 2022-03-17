@@ -50,17 +50,18 @@
       <div class="col-md-6">
         <div class="tile">
           <h3 class="tile-title">Monthly Sales</h3>
-          <div class="embed-responsive embed-responsive-16by9">
+          <div class="embed-responsive embed-responsive-16by9" style="margin-bottom:34px">
             <canvas class="embed-responsive-item" id="lineChartDemo"></canvas>
           </div>
         </div>
       </div>
       <div class="col-md-6">
-        <div class="tile">
-          <h3 class="tile-title">Support Requests</h3>
-          <div class="embed-responsive embed-responsive-16by9">
-            <canvas class="embed-responsive-item" id="pieChartDemo"></canvas>
-          </div>
+        <div class="tile" style="text-align: center">
+          <h3 class="tile-title">Random Picture</h3>
+          {{-- <div class="embed-responsive embed-responsive-16by9"> --}}
+            {{-- <canvas class="embed-responsive-item" id="pieChartDemo"></canvas> --}}
+            <img src="https://picsum.photos/300/300/?random" alt="">
+          {{-- </div> --}}
         </div>
       </div>
     </div>

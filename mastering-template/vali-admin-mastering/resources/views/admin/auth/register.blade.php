@@ -39,7 +39,7 @@
           </div>
           <div class="form-group">
             <label class="control-label">PASSWORD</label>
-            <input class="form-control" type="password" name="password" placeholder="Password" autofocus @error('name') style="border: 1px solid #ff0e0e" @enderror>
+            <input class="form-control" type="password" name="password" placeholder="Password" autofocus @error('password') style="border: 1px solid #ff0e0e" @enderror>
             @error('password')
                 <small style="color: #ff0e0e; margin-top:5px">{{ $message }}</small>
             @enderror
@@ -52,21 +52,27 @@
             <div class="utility">
               <div class="animated-checkbox">
                 <label>
-                  <input type="checkbox" name="checkbox">
-                  <span class="label-text" @error('checkbox') style="color:#ff0e0e" @enderror>I agree to the <a href="">terms of service</a></span>
+                  <input type="checkbox" name="agreement" value="on" {{ old('agreement') == 'on' ? 'checked' : '' }}>
+                  <span class="label-text" @error('agreement') style="color:#ff0e0e" @enderror>I agree to the <a href="">terms of service</a></span>
                 </label>
               </div>
               {{-- <p class="semibold-text mb-2"><a href="#" data-toggle="flip">Forgot Password ?</a></p> --}}
             </div>
           </div>
+          @if(session()->has('message'))
+          {{-- <div class="alert alert-success">
+            {{ session()->get('message') }}
+          </div> --}}
+          @endif
           <div class="form-group btn-container">
             <button class="btn btn-primary btn-block" type="submit"><i class="fa fa-sign-in fa-lg fa-fw"></i>REGISTER</button>
           </div>
-          <p style="margin-top:15px;"><a href="{{route('home')}}">Already an User ? Login Here.</a></p>
+          <p style="margin-top:15px;"><a href="{{route('admin.login')}}">Already an User ? Login Here.</a></p>
         </form>
       </div>
     </section>
     <!-- Essential javascripts for application to work-->
     @include('partials.scripts')
+    @include('sweetalert::alert')
   </body>
 </html>
