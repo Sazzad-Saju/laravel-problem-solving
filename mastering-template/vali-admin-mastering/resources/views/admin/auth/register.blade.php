@@ -67,7 +67,7 @@
           <div class="form-group btn-container">
             <button class="btn btn-primary btn-block" type="submit"><i class="fa fa-sign-in fa-lg fa-fw"></i>REGISTER</button>
           </div>
-          <p style="margin-top:15px;"><a href="{{route('admin.login')}}">Already an User ? Login Here.</a></p>
+          <p style="margin-top:15px;"><a href="{{route('admin.login.create')}}">Already an User ? Login Here.</a></p>
         </form>
       </div>
     </section>

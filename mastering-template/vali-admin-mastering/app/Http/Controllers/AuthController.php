@@ -62,13 +62,15 @@ class AuthController extends Controller
             // Alert::success('Congrats', 'You\'ve Successfully Registered! Click OK to login');
             toast('Successfully Created Account!','success');
             // return redirect()->back()->with('message','Successfully registered! Click OK to login...');
-            return redirect('/login'); 
+            return redirect('/'); 
             // return redirect('/')->with('success','Successfully registered!');
         }catch(Exception $e){
             toast('Something went wrong!','error');
             return redirect()->back();
         }
     }
+    /* Login Done via breeze */
+    /*
     public function showLoginForm(){
         return view('admin.auth.login');
     }
@@ -109,4 +111,5 @@ class AuthController extends Controller
         toast('You have logged out!','warning');
         return redirect('/login'); 
     }
+    */
 }

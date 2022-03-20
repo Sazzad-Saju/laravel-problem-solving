@@ -25,16 +25,16 @@
           <div class="form-group">
             <label class="control-label">EMAIL ADDRESS</label>
             <input class="form-control" name="email" type="text" placeholder="Email" autofocus @error('email') style="border: 1px solid #ff0e0e" @enderror value="{{old('email')}}" >
-            @error('email')
+            {{-- @error('email')
             <small style="color: #ff0e0e; margin-top:5px">{{ $message }}</small>
-            @enderror
+            @enderror --}}
           </div>
           <div class="form-group">
             <label class="control-label">PASSWORD</label>
             <input class="form-control" type="password" name="password" placeholder="Password" @error('password') style="border: 1px solid #ff0e0e" @enderror>
-            @error('password')
+            {{-- @error('password')
                 <small style="color: #ff0e0e; margin-top:5px">{{ $message }}</small>
-            @enderror
+            @enderror --}}
           </div>
           <div class="form-group">
             <div class="utility">

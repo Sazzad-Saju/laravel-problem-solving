@@ -30,7 +30,7 @@ class LoginRequest extends FormRequest
     {
         return [
             'email' => ['required', 'string', 'email'],
-            'password' => ['required', 'string'],
+            'password' => ['required', 'min:6'],
         ];
     }
 
@@ -47,7 +47,7 @@ class LoginRequest extends FormRequest
 
         if (! Auth::guard('admin')->attempt($this->only('email', 'password'), $this->boolean('remember'))) {
             RateLimiter::hit($this->throttleKey());
-
+            toast('Incorrect Credential!','error');
             throw ValidationException::withMessages([
                 'email' => trans('auth.failed'),
             ]);

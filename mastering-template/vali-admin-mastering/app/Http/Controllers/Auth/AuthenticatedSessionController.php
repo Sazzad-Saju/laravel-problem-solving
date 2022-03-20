@@ -63,7 +63,7 @@ class AuthenticatedSessionController extends Controller
         // $request->session()->destroy();
 
         // $request->session()->regenerateToken();
-
+        toast('You have logged out!','warning');
         return redirect('/');
     }
 }
