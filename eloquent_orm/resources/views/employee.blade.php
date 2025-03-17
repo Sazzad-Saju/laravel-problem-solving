@@ -29,8 +29,8 @@
                     <td>{{$employee->id}}</td>
                     <td>{{$employee->name}}</td>
                     <td>{{$employee->email}}</td>
-                    <td>{{$employee->department->name}}</td>
-                    <td>{{$employee->blood_group->name}}</td>
+                    <td>{{ optional($employee->department)->name }}</td>
+                    <td>{{ optional($employee->blood_group)->name }}</td>
                 </tr>
             @endforeach
           {{-- <tr>
